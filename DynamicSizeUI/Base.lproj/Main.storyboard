@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicSizeUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="large_building_grey" translatesAutoresizingMaskIntoConstraints="NO" id="Loq-tj-sgT">
-                                <rect key="frame" x="16" y="16" width="150" height="90"/>
+                                <rect key="frame" x="-38" y="16" width="396" height="212.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="BFL-zf-8lL"/>
-                                    <constraint firstAttribute="width" constant="500" id="FQO-XL-8Im"/>
+                                    <constraint firstAttribute="width" constant="600" id="FQO-XL-8Im"/>
                                     <constraint firstAttribute="height" constant="90" id="KnR-8F-2iD"/>
                                     <constraint firstAttribute="width" constant="396" id="VMq-Ws-c8d"/>
-                                    <constraint firstAttribute="height" constant="350" id="ZSN-C4-LMT"/>
+                                    <constraint firstAttribute="height" constant="450" id="ZSN-C4-LMT"/>
                                     <constraint firstAttribute="height" constant="212.66999999999999" id="ifF-IO-gOu"/>
                                 </constraints>
                                 <variation key="default">
@@ -42,22 +42,23 @@
                                         <include reference="KnR-8F-2iD"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular">
+                                <variation key="heightClass=compact-widthClass=compact" image="small_building_green"/>
+                                <variation key="heightClass=compact-widthClass=regular" image="small_building_green"/>
+                                <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <include reference="VMq-Ws-c8d"/>
                                         <include reference="ifF-IO-gOu"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=compact-widthClass=compact" image="small_building_green"/>
-                                <variation key="heightClass=compact-widthClass=regular" image="small_building_green"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
+                                        <include reference="FQO-XL-8Im"/>
                                         <include reference="ZSN-C4-LMT"/>
                                     </mask>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building 17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMG-si-Wre">
-                                <rect key="frame" x="182" y="16" width="370" height="29"/>
+                                <rect key="frame" x="16" y="244.5" width="288" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,20 +67,20 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FZ-Ve-LVW" userLabel="Lorem">
-                                <rect key="frame" x="16" y="122" width="536" height="134"/>
+                                <rect key="frame" x="16" y="327" width="288" height="234"/>
                                 <mutableString key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8Y-UJ-eaj">
-                                <rect key="frame" x="0.0" y="285" width="568" height="35"/>
+                                <rect key="frame" x="0.0" y="533" width="320" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, State, Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-K4-KZU">
-                                <rect key="frame" x="182" y="45" width="370" height="14.5"/>
+                                <rect key="frame" x="16" y="294" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
